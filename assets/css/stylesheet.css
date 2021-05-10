@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 60px 1fr 30px;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'header' 'content' 'footer';
+    background-color: #e0e0e0;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a120b3;
+    color: #fff;
+    padding: 10px; 
+}
+
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.menu li {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px;
+    transition: .6s;
+}
+
+.menu li a {
+    text-decoration: none;
+    height: 100%;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px;
+    transition: .3s;
+}
+
+li:hover {
+    background-color: #740283;
+    border-radius: 4px;
+}
+
+li a:hover {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.content {
+    grid-area: content;
+    height: calc(100vh - 90px);
+    padding: 20px;
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow: auto;
+}
+
+main {
+    border: 1px solid #808080;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px #606060;
+    padding: 30px;
+    background-color: #fff;
+}
+
+#btn1 {
+    margin: 20px 0 40px 0;
+}
+
+.btn-collor {
+    background-color: #a120b3;
+    border: 1px solid #a120b3;
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn-collor:hover {
+    background-color: #740283;
+    border: 1px solid #740283;
+}
+
+.btn-collor-green {
+    background-color: #5eb805;
+    border: 1px solid #5eb805;
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn-collor-green:hover {
+    background-color: #78e60b;
+    border: 1px solid #78e60b;
+    font-weight: 500;
+}
+
+
+#fieldname {
+    display: block;
+}
+
+#fieldradio {
+    display: block;
+    margin-top: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;    
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    background-color: #a120b3;
+    color: #fff;
+    padding: 10px;
+}
