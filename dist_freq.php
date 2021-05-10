@@ -9,7 +9,7 @@ if ($field == ''){
 $gap = $_POST['gap'];
 $data = array_map('floatval', explode(" ", $data));
 
-// Arrays usados para implementação (exemplosdos slides aula 8), apagar após testes
+// Arrays usados para implementação (exemplos dos slides aula 8), apagar após testes
 // $data = [
 //     0.8, 1.0, 1.0, 1.1, 1.3, 1.3, 1.4, 1.5, 1.5,
 //     1.6, 1.6, 1.8, 1.8, 1.9, 1.9, 1.9, 2.0, 2.0,
@@ -56,6 +56,7 @@ if($gap == 1){
         $mediumPoint[$i] = ($valIni[$i] + $valEnd[$i]) / 2;
     }
 }
+
 // Variáveis e iterações para formar o array que contém os valores de fri
 $fieldSize = count($counter);
 $totField = array_sum($counter);
@@ -65,8 +66,6 @@ for ($i = 0; $i < $fieldSize; $i++){
 }
 
 $fiSum = acumSum(...$counter); // Array com as somas acumulativas (Fac)
-
-
 ?>
 
 <!DOCTYPE html>
