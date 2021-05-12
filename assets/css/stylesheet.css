@@ -7,14 +7,11 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     overflow-x: hidden;
-    margin: auto;
     display: grid;
-    grid-template-rows: 60px 1fr 30px;
+    grid-template-rows: 60px 1fr;
     grid-auto-columns: 1fr;
-    grid-template-areas: 'header' 'content' 'footer';
-    background-color: #e0e0e0;
+    grid-template-areas: "header" "content";
 }
 
 .header {
@@ -25,7 +22,14 @@ body {
     justify-content: space-between;
     background-color: #a120b3;
     color: #fff;
-    padding: 10px; 
+    padding: 10px;
+    box-shadow: 0px 5px 5px #404040; 
+    z-index: 1;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
 }
 
 
@@ -68,21 +72,65 @@ li a:hover {
 
 .content {
     grid-area: content;
-    height: calc(100vh - 90px);
-    padding: 20px;
-    width: 70%;
-    margin: auto;
     box-sizing: border-box;
-    overflow-y: scroll;
-    overflow: auto;
+}
+
+.content-input {
+    display: grid;
+    height: calc(100vh - 60px);
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "inp" "side";
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.spreadsheet {
+    padding: 30px;
+    margin: auto;
+}
+
+.spreadsheet main h1, h2 {
+    text-align: center;
+}
+
+.spreadsheet main span {
+    font-size: 2rem;
+}
+
+#boxValues {
+    text-align: justify;
+    word-spacing: 1rem;
+}
+
+.table {
+    border-bottom: 1px solid #cecece;
 }
 
 main {
-    border: 1px solid #808080;
-    border-radius: 8px;
-    box-shadow: 5px 5px 5px #606060;
+    grid-area: inp;
+    /* margin: 30px; */
+    background-color: #ffffff90;
+    border-radius: 4px;
     padding: 30px;
-    background-color: #fff;
+} 
+
+label {
+    font-weight: bolder;
+}
+
+.side {
+    grid-area: side;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin: 30px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.content-input .side p {
+    background-color: #ffffff90;
+    border-radius: 4px;
 }
 
 #btn1 {
@@ -129,16 +177,14 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;    
+    margin: 0 30px;   
 }
 
-.footer {
-    grid-area: footer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:flex-start;
-    background-color: #a120b3;
-    color: #fff;
-    padding: 10px;
+.buttons-nav a{
+    margin-right: 30px;
+}
+
+#view {
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
 }

@@ -1,6 +1,7 @@
 var data = ""
 var stringJS = document.getElementById('stringjs')
 
+
 // Concatena os dados do input em uma string js
 function inputValue(){
     data.replace(',', '.');
@@ -9,11 +10,10 @@ function inputValue(){
     } else {
         data += " " + ($('#data').val());        
     }
-
+    
     // Insere os valores criados na string no input do form
     stringJS.value = data
-    console.log(stringJS)
-
+    document.getElementById('view').innerHTML = stringJS.value
     limpar()
 }
 
@@ -40,10 +40,11 @@ $(document).ready(function() {
 
 // Função que valida o input
 var s = 0;
-function validate(msg='Por favor informe umnúmero válido!'){
+function validate(msg){
     var val = document.getElementById("data").value
-    if(val == ""){
-        val = msg
+    var divErr = document.getElementById('invalid')
+    if((val == "") || (val.length > 7)){
+         divErr.innerText = msg
         $("#invalid").fadeIn();
         s = 1;
     } else if (val != "" && s == 1){
@@ -56,8 +57,30 @@ function validate(msg='Por favor informe umnúmero válido!'){
 
 // Função imprimir
 function printTable(text){
-    text=document.getElementById("table")
+    text = document.getElementById("main-table")
     print(text)
 }
 
+// Exibe os valores dos dados passado para a tabela
+function showValues(){
+    div = document.getElementById("boxValues")
+    btn = document.getElementById('btnShow')
+    btnValue = btn.textContent
+    if (btnValue == "Exibir Valores"){
+        div.style.display = "block"
+        btn.textContent = "Ocultar Valores"
+    } else{
+        div.style.display = "none"
+        btn.textContent = "Exibir Valores"        
+    }
+}
+
 // Função que valida o submit sem valores
+function validateForm(form) {
+    if (stringJS.value.length >=2) {
+        return true
+    } else {
+        validate("Insira no minímo dois valores para gerar a tabela!")
+        return false;
+    }
+};

@@ -14,7 +14,7 @@
 <body>
     <header class="header">
             <div class="logo">
-                <img src="./assets/Images/simbolo-estatistica-negativa.png" alt="simbolo-estatistica-negativa.png">
+                <a href="./index.html"><img src="./assets/Images/simbolo-estatistica-negativa.png" alt="simbolo-estatistica-negativa.png"></a>
             </div>
             <div class="menu">
                 <nav>
@@ -34,41 +34,45 @@
                 </nav>
             </div>
     </header>
-    <div class="content">
-        <main>
-            <div id="invalid" class="alert alert-danger" role="alert" style="display: none">
-                Por favor, insira um valor válido!
-            </div>
-            <form action="dist_freq.php" id="form1" method="POST">
-                <div class="form-row">
-                    <div class="form-group col-md-12">
-                        <label for="data">Insira os Valores</label>
-                        <input type="number" id="data" class="form-control" name="data" value="" placeholder="Insira os valores das amostras"/>
-                        <input onclick="validate()" class="btn btn-collor" id="btn1" value="Inserir Valor" size="15px"></input>
-                        <input type="hidden" id="stringjs" name="stringjs" value=''>
-                        <label for="field" id="fieldname">Nome do campo</label>
-                        <input type="text" id="field" class="form-control" name="field">
-                        <div class="form-group col-md-6">
-                            <label id="fieldradio">Visualizar intervalos</label>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="gap" name="gap" value="1" checked>
-                                <label for="gap" class="form-check-label">Sim</label>
-                            </div>
-                            <div class="form-check-inline">
-                                <input type="radio" class="form-check-input" id="no_gap" name="gap" value="0">
-                                <label for="no_gap" class="form-check-label">Não</label>
-                            </div>
-                        </div>
-                        <!-- <input onclick="check()" class="btn btn-primary" id="btn2" value="Gerar Tabela" size="15px"></input> -->
-                        <button type="submit" id="submit" class="btn btn-collor-green">Gerar Tabela</button>
-                    </div>
+    <div class="content" style="background-image: url('./assets/Images/input_page2_img.jpg'); background-repeat: no-repeat; height: 100%;">
+        <div class=content-input>
+            <main class="inp">
+                <div id="invalid" class="alert alert-danger" role="alert" style="display: none">
                 </div>
-            </form>        
-        </main>
+                <form action="dist_freq.php" id="form1" onsubmit="return validateForm(this)" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="data">Insira os Valores</label>
+                            <input type="number" id="data" class="form-control" name="data" value="" placeholder="Insira os valores das amostras"/>
+                            <input onclick="validate('Por favor informe um número válido!')" class="btn btn-collor" id="btn1" value="Inserir Valor" size="15px"></input>
+                            <input type="hidden" id="stringjs" name="stringjs" value=''>
+                            <label for="field" id="fieldname">Nome do campo</label>
+                            <input type="text" id="field" class="form-control" name="field" placeholder="Insira o nome do campo">
+                            <div class="form-group col-md-6">
+                                <label id="fieldradio">Visualizar intervalos</label>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="gap" name="gap" value="1" checked>
+                                    <label for="gap" class="form-check-label">Sim</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" id="no_gap" name="gap" value="0">
+                                    <label for="no_gap" class="form-check-label">Não</label>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit" class="btn btn-collor-green">Gerar Tabela</button>
+                        </div>
+                    </div>
+                </form>        
+            </main>
+        
+            <aside class="side">
+                <p id="view"></p>
+            </aside>
+        </div>
     </div>    
-    <footer class="footer">
+    <!-- <footer class="footer">
         ADS 2021
-    </footer>
+    </footer> -->
     <script src="./assets/javascript/jquery-3.6.0.min.js"></script>
     <script src="./assets/javascript/script.js"></script>    
 </body>
