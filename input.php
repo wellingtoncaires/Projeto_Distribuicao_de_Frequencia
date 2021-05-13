@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/stylesheet.css">
     <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
-    <title>Inicio</title>
+    <title>Iniciar</title>
 </head>
 <body>
     <header class="header">
@@ -69,10 +69,7 @@
                 <p id="view"></p>
             </aside>
         </div>
-    </div>    
-    <!-- <footer class="footer">
-        ADS 2021
-    </footer> -->
+    </div>
     <script src="./assets/javascript/jquery-3.6.0.min.js"></script>
     <script src="./assets/javascript/script.js"></script>    
 </body>
