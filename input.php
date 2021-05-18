@@ -12,16 +12,17 @@
     <title>Iniciar</title>
 </head>
 <body>
-    <header class="header">
+<header class="header">
             <div class="logo">
-                <a href="./index.html"><img src="./assets/Images/simbolo-estatistica-negativa.png" alt="simbolo-estatistica-negativa.png"></a>
+                <a href="./index.html"><img src="./assets/Images/simbolo-estatistica-negativa.png" alt="simbolo-estatistica.png"></a>
             </div>
             <div class="menu">
                 <nav>
-                    <ul>
+                    <ul id="icons">
                         <li>
                             <a href="index.html">HOME</a>
-                        </li><li>
+                        </li>
+                        <li>
                             <a href="input.php">INICIAR</a>
                         </li>
                         <li>
@@ -32,6 +33,11 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+            <div class="btn-toggle" onclick="drop()">
+                <div class="toggle">
+                    <img src="./assets/Images/button_toggle.png" alt="button_toggle">
+                </div>       
             </div>
     </header>
     <div class="content" style="background-image: url('./assets/Images/input_page2_img.jpg'); background-repeat: no-repeat; height: 100%;">

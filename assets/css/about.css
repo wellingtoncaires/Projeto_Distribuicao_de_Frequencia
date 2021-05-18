@@ -69,6 +69,10 @@ li a:hover {
     color: #fff;
 }
 
+.btn-toggle {
+    display: none;
+}
+
 .content {
     height: calc(100vh - 60px);
     overflow-y: hidden;   
@@ -76,7 +80,7 @@ li a:hover {
 
 .text {
     padding: 30px;
-    max-width: 80%;
+    max-width: 100%;
     text-align: justify;
 }
 
@@ -89,5 +93,75 @@ li a:hover {
 }
 
 .text p {
+    text-indent: 50px;
     color: #505050;
+}
+
+@media (max-width: 720px) {
+
+    .header ul{
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        margin-top: 103px;
+        width: 100%;
+    }
+
+
+    .menu ul {
+        position: absolute;
+        margin-left: -78px;
+        width: 100vw;
+    }
+    
+    .menu ul li {
+        display: block;
+        margin: -2px;
+        text-align: center;
+        background-color: #740283;
+    }
+    
+    .menu ul li:hover {
+        background-color: #a120b3;
+        border: none;
+    } 
+
+    .menu ul li a {
+        width: 100vw;
+    }
+
+    .btn-toggle {
+        display: block;
+    }
+
+    .toggle img {
+        margin: 3px 5px;
+    }
+
+    .btn-toggle {
+        width: 50px;
+        height: 45px;
+    }
+
+    .btn-toggle:hover {
+        background-color: #740283;
+    }
+    
+    .text {
+        width: 90%;
+        margin: auto;
+        overflow-y: auto;
+        padding: 5px;
+    }
+
+    .text h1 {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .text p{
+        text-indent: 30px;
+    }
 }

@@ -1,7 +1,6 @@
 var data = ""
 var stringJS = document.getElementById('stringjs')
 
-
 // Concatena os dados do input em uma string js
 function inputValue(){
     data.replace(',', '.');
@@ -84,3 +83,24 @@ function validateForm(form) {
         return false;
     }
 };
+
+// Menu dropdown
+function drop(){ 
+        if (status != 1){
+            document.getElementById('icons').style.display = "block"
+            status = 1
+        } else {
+            document.getElementById('icons').style.display = "none"
+            status = 0
+        }
+}
+
+// Mostrar menu em linha mesmo após ocultar com função drop
+window.onresize = function(){
+    let screenSize = $(window).width();
+    if (screenSize > 720){
+        document.getElementById('icons').style.display = "block"
+    } else {
+        document.getElementById('icons').style.display = "none"
+    }
+ };

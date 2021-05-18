@@ -69,6 +69,10 @@ li a:hover {
     color: #fff;
 }
 
+.btn-toggle {
+    display: none;
+}
+
 .content {
     height: calc(100vh - 60px);
     display: grid;
@@ -131,4 +135,98 @@ li a:hover {
 
 .text p {
     color: #303030;
+}
+
+@media (max-width: 720px) {
+
+    .header ul{
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        margin-top: 103px;
+        width: 100%;
+    }
+
+
+    .menu ul {
+        position: absolute;
+        margin-left: -78px;
+        width: 100vw;
+    }
+    
+    .menu ul li {
+        display: block;
+        margin: -2px;
+        text-align: center;
+        background-color: #740283;
+    }
+    
+    .menu ul li:hover {
+        background-color: #a120b3;
+        border: none;
+    } 
+
+    .menu ul li a {
+        width: 100vw;
+    }
+
+    .btn-toggle {
+        display: block;
+    }
+
+    .toggle img {
+        margin: 3px 5px;
+    }
+
+    .btn-toggle {
+        width: 50px;
+        height: 45px;
+    }
+
+    .btn-toggle:hover {
+        background-color: #740283;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .right {
+        width: 90%;
+        margin: auto;
+    }
+
+    .name-box {
+        width: 90%;
+        margin: 25px auto;
+        height: 90%;
+    }
+
+    .name-box ul {
+        font-size: 1.8rem;
+    }
+
+    .left {
+        width: 90%;
+        margin: auto;
+    }
+
+    .text {
+        border: none;
+        margin: auto;
+        padding: 0;
+    }
+
+    .text h1 {
+        color: #000;
+    }
+
+    .text p {
+        color: #000;
+    }
 }

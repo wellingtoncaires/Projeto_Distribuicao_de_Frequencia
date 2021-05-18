@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/index1.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="shortcut icon" href="./assets/Images/favicon.png" type="image/x-icon">
     <title>Frequenciando</title>
 </head>
@@ -21,7 +21,7 @@
             </div>
             <div class="menu">
                 <nav>
-                    <ul>
+                    <ul id="icons">
                         <li>
                             <a href="index.html">HOME</a>
                         </li>
@@ -37,10 +37,15 @@
                     </ul>
                 </nav>
             </div>
+            <div class="btn-toggle" onclick="drop()">
+                <div class="toggle">
+                    <img src="./assets/Images/button_toggle.png" alt="button_toggle">
+                </div>       
+            </div>
     </header>
     <div class="content">
         <div class="index-carousel">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  data-interval="4000" data-pause="false">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -74,9 +79,10 @@
             </div>
             <div class="button">
                 <p>Crie já a sua!</p>
-                <button id="init" class="btn btn-collor-green"><a href="input.php">Iniciar</a></button>
+                <button id="init" class="btn btn-collor-green"><a id="init-a" href="input.php">Iniciar</a></button>
             </div>
         </div>
     </div>
+    <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
