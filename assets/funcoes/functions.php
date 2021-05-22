@@ -35,12 +35,12 @@ function variaveis($dec, ...$num){
 // Retorna um array ou matriz com os valores dos intervalos de frequências
 function freq($min, $max, $step, $gap){
     if ($gap == 1){
-        $int = [ini => [], end => []];
+        $int = ['ini' => [], 'end' => []];
         $k = 0;
         for ($i = $min; $i <= $max; $i += $step){
             $j = $i + $step;
-            $int[ini][$k] = $i;
-            $int[end][$k] = $j;
+            $int['ini'][$k] = $i;
+            $int['end'][$k] = $j;
             $k++;        
         }
         return $int;
@@ -67,7 +67,7 @@ function freq($min, $max, $step, $gap){
 // Retorna um array com os valores das frequências (fi)
 function freqAbs($ini, $int, ...$data){
     $freqI = [];
-    $step = $ini + $int;
+    $step = $ini + $int; //1.8
     $size = count($data);
     $c = 0;
     $j = 0;
