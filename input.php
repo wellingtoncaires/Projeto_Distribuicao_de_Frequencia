@@ -40,7 +40,7 @@
                 </div>       
             </div>
     </header>
-    <div class="content" style="background-image: url('./assets/Images/input_page2_img.jpg'); background-repeat: no-repeat; height: 100%;">
+    <div class="content" style="background-image: url('./assets/Images/input_page2_img.jpg'); background-repeat: no-repeat; background-size: cover;">
         <div class=content-input>
             <main class="inp">
                 <div id="invalid" class="alert alert-danger" role="alert" style="display: none">
@@ -50,7 +50,7 @@
                         <div class="form-group col-md-12">
                             <label for="data">Insira os Valores</label>
                             <input type="number" id="data" class="form-control" name="data" value="" placeholder="Insira os valores das amostras"/>
-                            <input onclick="validate('Por favor informe um número válido!')" class="btn btn-collor" id="btn1" value="Inserir Valor" size="15px"></input>
+                            <input onclick="validate('Por favor, informe um número válido!')" class="btn btn-collor" id="btn1" value="Inserir Valor" size="15px"></input>
                             <input type="hidden" id="stringjs" name="stringjs" value=''>
                             <label for="field" id="fieldname">Nome do campo</label>
                             <input type="text" id="field" class="form-control" name="field" placeholder="Insira o nome do campo">

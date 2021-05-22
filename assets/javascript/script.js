@@ -16,7 +16,7 @@ function inputValue(){
     limpar()
 }
 
-// Aciona o botão de inserir dados através da tecla
+// Aciona o botão de inserir dados através da tecla enter
 document.addEventListener("keyup",function(event){
     if(event.key === "Enter"){
         this.getElementById('btn1').click()

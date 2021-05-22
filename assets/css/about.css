@@ -74,8 +74,7 @@ li a:hover {
 }
 
 .content {
-    height: calc(100vh - 60px);
-    overflow-y: hidden;   
+    overflow-y: auto;   
 }
 
 .text {
@@ -89,12 +88,16 @@ li a:hover {
     font-weight: 600;
     color: #404040;
     margin-bottom: 20;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #505050;
 }
 
 .text p {
+    font-size: 1.2rem;
+    color: #404040;
+}
+
+.ident {
     text-indent: 50px;
-    color: #505050;
 }
 
 @media (max-width: 720px) {
@@ -142,7 +145,7 @@ li a:hover {
 
     .btn-toggle {
         width: 50px;
-        height: 45px;
+        height: 35px;
     }
 
     .btn-toggle:hover {
@@ -162,6 +165,6 @@ li a:hover {
     }
 
     .text p{
-        text-indent: 30px;
+        color: #000;
     }
 }

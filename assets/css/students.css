@@ -74,17 +74,15 @@ li a:hover {
 }
 
 .content {
-    height: calc(100vh - 60px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row: 1fr;
     grid-template-areas: 'left' 'right';
-    overflow-y: hidden;
-    
+    overflow-y: auto;    
 }
 
 .left {
-    height: 100%;
+    max-height: 500px;
     grid-area: left;
     grid-row-end: 3;
 }
@@ -112,7 +110,7 @@ li a:hover {
 }
 
 .right {
-    height: 100%;
+    max-height: 500px;
     grid-area: right;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -182,7 +180,7 @@ li a:hover {
 
     .btn-toggle {
         width: 50px;
-        height: 45px;
+        height: 35px;
     }
 
     .btn-toggle:hover {

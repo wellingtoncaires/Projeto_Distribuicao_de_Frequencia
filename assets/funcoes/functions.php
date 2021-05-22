@@ -88,14 +88,14 @@ function freqAbs($ini, $int, ...$data){
     }
     return $freqI;
 }
-
+ 
 function acumSum(...$arr){
     $ret = [];
     $size = count($arr);
     $counter = 0;
     for($i = 0; $i < $size; $i++){
-        $c += $arr[$i];
-        $ret[$i] = $c;
+        $counter += $arr[$i];
+        $ret[$i] = $counter;
     }
     return $ret;
 }
