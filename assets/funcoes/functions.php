@@ -65,26 +65,33 @@ function freq($min, $max, $step, $gap){
 
 
 // Retorna um array com os valores das frequências (fi)
-function freqAbs($ini, $int, ...$data){
+function freqAbs($ini, $inter, ...$data){
     $freqI = [];
-    $step = $ini + $int; //1.8
-    $size = count($data);
+    $step = $ini + $inter;
+    $sizeArray = count($data);
+    $maxArray = max($data);
+    $sumTotal = 0;
+    $sumFreqI = 0;
+    $cont = 0;
     $c = 0;
-    $j = 0;
-    for($i=0; $i <= $size; $i++){
-        if($i == $size){
-            $freqI[$j] = $c;
-        } else {
-            if($data[$i] >= $step){
-                $step += $int;
-                $freqI[$j] = $c;
-                $j++;
-                $c = 0;
-            }
+    for($i=0; $i < $sizeArray; $i++){
+        if($data[$i] >= $ini && $data[$i] < $step){
+            $c++;
+        }else {
+            $freqI[] = $c;
+            $cont += $c;
+            $c = 0;
+            $ini = $step;
+            $step += $inter;
+            $i--;
         }
-        if ($data[$i] < $step){
-            $c += 1;
-        }
+        if ($sizeArray - 1 == $i){
+            $freqI[] = $c;
+            $cont += $c;
+            $c = 0;
+            $ini = $step;
+            $step += $inter;
+        } 
     }
     return $freqI;
 }

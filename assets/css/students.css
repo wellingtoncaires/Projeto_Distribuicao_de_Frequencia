@@ -98,10 +98,6 @@ li a:hover {
 }
 
 .name-box ul {
-    list-style: none;
-}
-
-.name-box ul {
     font-size: 2rem;
 }
 
@@ -122,13 +118,13 @@ li a:hover {
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 30px;
-    border-left: 1px solid #303030;
+    border-left: 1px solid #404040;
 }
 
 .text h1 {
     font-size: 3rem;
     font-weight: 600;
-    color: #303030;
+    color: #404040;
 }
 
 .text p {
@@ -194,22 +190,25 @@ li a:hover {
         overflow-y: auto;
     }
 
-    .right {
+    .left {
         width: 90%;
         margin: auto;
+        height: auto;
     }
 
     .name-box {
         width: 90%;
         margin: 25px auto;
-        height: 90%;
+        height: auto;
+        padding: 5px;
     }
 
     .name-box ul {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-left: 20px;
     }
 
-    .left {
+    .right {
         width: 90%;
         margin: auto;
     }

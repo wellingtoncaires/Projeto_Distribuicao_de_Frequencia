@@ -1,6 +1,5 @@
 <?php
     require_once './assets/funcoes/receive_data.php';
-    ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>
